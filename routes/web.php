@@ -19,6 +19,6 @@ Route::get('/', function () {
  * Note these routes and controller won't work if we run 
  * php artisan make:auth
  */
-Route::get('login', 'LoginController@getRegistration');
-Route::post('login', 'LoginController@postRegistration');
-Route::get('login/{id}', 'LoginController@handleRouteParameter');
+Route::get('login', 'RegistrationController@getRegistration');
+Route::post('login', 'RegistrationController@postRegistration');
+Route::get('login/{id}', 'RegistrationController@handleRouteParameter');
