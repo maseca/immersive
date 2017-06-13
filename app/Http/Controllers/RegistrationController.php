@@ -15,7 +15,7 @@ class RegistrationController extends Controller
     {
     	if($request->has('name'))
     		$name = $request['name'];
-    	return view('pages.login.login', compact('name'));
+    	return view('pages.registration.registration', compact('name'));
     }
 
     /**
