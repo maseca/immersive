@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/**
+ * Note these routes and controller won't work if we run 
+ * php artisan make:auth
+ */
+Route::get('login', 'LoginController@getRegistration');
+Route::post('login', 'LoginController@postRegistration');
+Route::get('login/{id}', 'LoginController@handleRouteParameter');
