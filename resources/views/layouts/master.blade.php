@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="@yield('description')">
-        <title>Immersive | @yield('title')</title>
+        <title>The Forum | @yield('title')</title>
         <!-- Fonts -->
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:100,600">
         <!-- Latest compiled and minified CSS -->
