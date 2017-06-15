@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'user_name', 'first_name', 'last_name', 'email', 'password'
+        'first_name', 'last_name', 'email', 'password', 'user_name', 'bio'
     ];
 
     /**
@@ -24,6 +24,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token'
     ];
+
+	public function fposts(){
+		return $this->hasMany('App\Fpost');
+	}
 }

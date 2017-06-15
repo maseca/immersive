@@ -15,14 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/**
- * Note these routes and controller won't work if we run 
- * php artisan make:auth
- */
-Route::get('register', 'RegistrationController@getRegistration');
-Route::post('register', 'RegistrationController@postRegistration');
-Route::get('login', 'LogInController@getLogIn');
-Route::post('login', 'LogInController@postLogIn');
-Route::get('forum', 'ForumController@getForum');
-//Route::post('forum', 'ForumController@postLogIn');
-//Route::get('login/{id}', 'RegistrationController@handleRouteParameter');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
