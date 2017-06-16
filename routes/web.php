@@ -21,3 +21,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::get('/newpost', 'NewPostController@index')->name('newpost');
 Route::post('/newpost', 'NewPostController@create');
+Route::get('/editbio', 'BioController@index')->name('editbio');
+Route::post('/editbio', 'BioController@create');

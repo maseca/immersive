@@ -8,9 +8,9 @@
                 <div class="panel-heading">Profile</div>
 
                 <div class="panel-body">
-					<a href="{{url('/')}}">Bio</a><br>
+					Bio: {{Auth::user()->bio}}<br>
+					<a href="{{url('/editbio')}}">Edit Bio</a><br>
 					<a href="{{url('/')}}">Posts</a><br>
-					<a href="{{url('/')}}">Edit</a><br>
                 </div>
             </div>
         </div>

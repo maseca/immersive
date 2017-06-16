@@ -8,7 +8,8 @@
                 <div class="panel-heading">MEATLAB FORUM</div>
 
                 <div class="panel-body">
-					<a href="{{url('/')}}">Posts</a>
+					<a href="{{url('/newpost')}}">Make New Post</a><br>
+					<a href="{{url('/profile')}}">Profile</a>
                 </div>
             </div>
         </div>
