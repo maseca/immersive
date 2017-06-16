@@ -16,7 +16,9 @@
 			@foreach ($posts as $post)
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						Thread ID: {{$post->thread_id}} Post ID: {{$post->id}} Last Edited: {{$post->updated_at}}
+						Posted By: {{MEATLAB\User::where('id', $post->user_id)->first()->user_name}}<br>
+						Thread ID: {{$post->thread_id}} Post ID: {{$post->id}}<br>
+						Last Edited: {{$post->updated_at}}
 					</div>
 
 					<div class="panel-body">

@@ -52,12 +52,13 @@ class NewPostController extends Controller
      */
     public function create(Request $data)
     {
+		$posts = Fpost::all();
         Fpost::create([
             'content' => $data->input('content'),
 			'user_id' => Auth::id(),
 			'thread_id' => $data->input('thread_id')
         ]);
 
-		return view('home');
+		return view('home', compact('posts'));
     }
 }
