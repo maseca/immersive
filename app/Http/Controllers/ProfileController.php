@@ -2,6 +2,8 @@
 
 namespace MEATLAB\Http\Controllers;
 
+use MEATLAB\User;
+use Auth;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -23,6 +25,12 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('profile');
+		$user = User::with('fposts')->where('id', Auth::id())->first();
+        return view('profile', compact('user'));
     }
+	
+	public function handleRouteParam($user_name){
+		$user = User::with('fposts')->where('user_name', $user_name)->first();
+        return view('profile', compact('user'));
+	}
 }

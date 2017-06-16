@@ -3,6 +3,7 @@
 namespace MEATLAB\Http\Controllers;
 
 use Illuminate\Http\Request;
+use MEATLAB\Fpost;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+		$posts = Fpost::all();
+        return view('home', compact('posts'));
     }
 }
