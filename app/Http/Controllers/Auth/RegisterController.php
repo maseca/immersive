@@ -70,7 +70,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
 			'user_name' => $data['user_name'],
             'password' => bcrypt($data['password']),
-			'bio' => ''
+			'bio' => 'I have not updated my bio yet!'
         ]);
     }
 }

@@ -3,8 +3,7 @@
 namespace MEATLAB\Http\Controllers\Auth;
 
 use MEATLAB\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
-
+use Illuminate\Foundation\Auth\AuthenticatesUsers; 
 class LoginController extends Controller
 {
     /*

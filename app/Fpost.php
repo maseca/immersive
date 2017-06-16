@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Fpost extends Model
 {
     protected $fillable = [
-		'thread_id', 'content'
+		'thread_id', 'content', 'user_id'
     ];
 }
