@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace MEATLAB;
 
 use Illuminate\Database\Eloquent\Model;
 

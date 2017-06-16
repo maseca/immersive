@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace MEATLAB\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

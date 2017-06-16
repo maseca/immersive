@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace MEATLAB;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -28,6 +28,6 @@ class User extends Authenticatable
     ];
 
 	public function fposts(){
-		return $this->hasMany('App\Fpost');
+		return $this->hasMany('MEATLAB\Fpost');
 	}
 }

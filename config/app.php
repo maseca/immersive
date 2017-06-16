@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'MEATLAB'),
 
     /*
     |--------------------------------------------------------------------------
@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        MEATLAB\Providers\AppServiceProvider::class,
+        MEATLAB\Providers\AuthServiceProvider::class,
+        // MEATLAB\Providers\BroadcastServiceProvider::class,
+        MEATLAB\Providers\EventServiceProvider::class,
+        MEATLAB\Providers\RouteServiceProvider::class,
 
     ],
 
