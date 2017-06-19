@@ -32,6 +32,6 @@ class BioController extends Controller
             'bio' => $data->input('bio'),
         ]);
 
-		return view('home');
+		return view('profile', compact('user'));
     }
 }

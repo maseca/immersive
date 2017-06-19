@@ -52,6 +52,33 @@ class NewPostController extends Controller
      */
     public function create(Request $data)
     {
+        Fpost::create([
+            'content' => $data->input('content'),
+			'user_id' => Auth::id(),
+			'thread_id' => $data->input('thread_id')
+        ]);
+
+		$posts = Fpost::all();
+		return view('home', compact('posts'));
+    }
+
+	public function handleRouteParam($post_id){
+		$post = Fpost::where('id', $post_id)->first();
+        return view('editpost', compact('post'));
+	}
+
+	public function update(Request $data, $id){
+		$editable = Fpost::where($id)->first();
+        $editable->update([
+            'content' => $data->input('content'),
+        ]);
+
+		$posts = Fpost::all();
+		return view('home', compact('posts'));
+	}
+
+    /*public function destroy(Request $data)
+    {
 		$posts = Fpost::all();
         Fpost::create([
             'content' => $data->input('content'),
@@ -61,4 +88,5 @@ class NewPostController extends Controller
 
 		return view('home', compact('posts'));
     }
+	*/
 }
